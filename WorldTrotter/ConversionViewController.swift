@@ -10,6 +10,19 @@ import UIKit
 
 class ConversionViewController : UIViewController, UITextFieldDelegate {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("ConversionViewContoller loaded its view")
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let hour = NSCalendar.currentCalendar().component(.Hour, fromDate: NSDate())
+        if (hour < 8 || hour > 17){
+            self.view.backgroundColor = UIColor.grayColor()
+        }
+    }
+    
     @IBOutlet var celsiusLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
