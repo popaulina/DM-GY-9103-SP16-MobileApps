@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		400594971C6D0DD900CA491B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 400594961C6D0DD900CA491B /* MapKit.framework */; };
 		40B4BE311C6E4BCB00095FEE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B4BE301C6E4BCB00095FEE /* MapViewController.swift */; };
+		40C23E231C71FF6C00C26D2F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C23E221C71FF6C00C26D2F /* WebViewController.swift */; };
+		40C23E251C7200D900C26D2F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C23E241C7200D900C26D2F /* WebKit.framework */; };
 		40D814231C67F58900CED49D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D814221C67F58900CED49D /* AppDelegate.swift */; };
 		40D814281C67F58900CED49D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40D814261C67F58900CED49D /* Main.storyboard */; };
 		40D8142A1C67F58900CED49D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40D814291C67F58900CED49D /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		400594961C6D0DD900CA491B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		40B4BE301C6E4BCB00095FEE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		40C23E221C71FF6C00C26D2F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		40C23E241C7200D900C26D2F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		40D8141F1C67F58900CED49D /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40D814221C67F58900CED49D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40D814271C67F58900CED49D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				400594971C6D0DD900CA491B /* MapKit.framework in Frameworks */,
+				40C23E251C7200D900C26D2F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +48,7 @@
 		40D814161C67F58900CED49D = {
 			isa = PBXGroup;
 			children = (
+				40C23E241C7200D900C26D2F /* WebKit.framework */,
 				400594961C6D0DD900CA491B /* MapKit.framework */,
 				40D814211C67F58900CED49D /* WorldTrotter */,
 				40D814201C67F58900CED49D /* Products */,
@@ -67,6 +73,7 @@
 				40D814291C67F58900CED49D /* Assets.xcassets */,
 				40D8142B1C67F58900CED49D /* LaunchScreen.storyboard */,
 				40D8142E1C67F58900CED49D /* Info.plist */,
+				40C23E221C71FF6C00C26D2F /* WebViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -103,6 +110,7 @@
 				TargetAttributes = {
 					40D8141E1C67F58900CED49D = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8KB7C4F5N2;
 					};
 				};
 			};
@@ -145,6 +153,7 @@
 				40D814351C680BFC00CED49D /* ConversionViewController.swift in Sources */,
 				40B4BE311C6E4BCB00095FEE /* MapViewController.swift in Sources */,
 				40D814231C67F58900CED49D /* AppDelegate.swift in Sources */,
+				40C23E231C71FF6C00C26D2F /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +266,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nyu.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -268,10 +281,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WorldTrotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nyu.WorldTrotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
