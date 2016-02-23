@@ -85,20 +85,21 @@ class ConversionViewController : UIViewController, UITextFieldDelegate {
 //            print("Replacement text: \(string)")
 //            
 //            return true
-            let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
-            let replacementTextHasDecimalSeparator = string.rangeOfString(".")
-            
-            let validCharacters = NSCharacterSet(charactersInString: "-.0123456789")
-            
-            if (string.stringByTrimmingCharactersInSet(validCharacters).characters.count > 0){
-                return false
-            }
-            else if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
-                return false
-            }
-            else {
-                return true
-            }
+
+        let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
+        let replacementTextHasDecimalSeparator = string.rangeOfString(".")
+        
+        let validCharacters = NSCharacterSet(charactersInString: "-.,0123456789")
+         
+        if (string.stringByTrimmingCharactersInSet(validCharacters).characters.count > 0){
+            return false
+        }
+        else if existingTextHasDecimalSeparator != nil && replacementTextHasDecimalSeparator != nil {
+            return false
+        }
+        else {
+            return true
+        }
     }
     
     
