@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Items View Controller-->
         <scene sceneID="uAN-rU-Q3e">
             <objects>
                 <tableViewController id="AMB-tN-QFr" customClass="ItemsViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nia-D7-qEt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="nia-D7-qEt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -43,13 +44,46 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="478-9v-Yi1">
-                                <rect key="frame" x="0.0" y="88" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="65" id="478-9v-Yi1" customClass="ItemCell" customModule="Homepwner" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="600" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="478-9v-Yi1" id="74F-Uk-ZcX">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-kj-z9o">
+                                            <rect key="frame" x="27" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ioq-cu-2fo">
+                                            <rect key="frame" x="550" y="21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKw-pS-ro4">
+                                            <rect key="frame" x="27" y="35" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ioq-cu-2fo" firstAttribute="centerY" secondItem="74F-Uk-ZcX" secondAttribute="centerY" id="5Ac-aD-97n"/>
+                                        <constraint firstItem="WwA-kj-z9o" firstAttribute="leading" secondItem="74F-Uk-ZcX" secondAttribute="leadingMargin" constant="19" id="6IH-0O-FDz"/>
+                                        <constraint firstItem="WwA-kj-z9o" firstAttribute="top" secondItem="74F-Uk-ZcX" secondAttribute="topMargin" id="HBE-1O-0O4"/>
+                                        <constraint firstItem="FKw-pS-ro4" firstAttribute="bottom" secondItem="74F-Uk-ZcX" secondAttribute="bottomMargin" id="dco-jL-8bO"/>
+                                        <constraint firstItem="FKw-pS-ro4" firstAttribute="leading" secondItem="WwA-kj-z9o" secondAttribute="leading" id="f4e-vs-axH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ioq-cu-2fo" secondAttribute="trailing" id="gi8-cF-Ydd"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="WwA-kj-z9o" id="Foj-Lj-z55"/>
+                                    <outlet property="serialNumberLabel" destination="FKw-pS-ro4" id="dcR-ie-EJI"/>
+                                    <outlet property="valueLabel" destination="ioq-cu-2fo" id="3no-I9-ctH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
