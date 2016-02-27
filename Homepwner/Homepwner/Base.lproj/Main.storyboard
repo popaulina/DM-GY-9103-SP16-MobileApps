@@ -13,9 +13,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="KR2-Ir-wMt">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cng-yJ-jcX">
+                                    <rect key="frame" x="8" y="15" width="288" height="30"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="tottoggleEditingMode:" destination="AMB-tN-QFr" eventType="touchUpInside" id="NY1-rj-YXX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ec-EH-mzQ">
+                                    <rect key="frame" x="304" y="15" width="288" height="30"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addNewItem:" destination="AMB-tN-QFr" eventType="touchUpInside" id="jH7-03-wVA"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="5ec-EH-mzQ" firstAttribute="leading" secondItem="cng-yJ-jcX" secondAttribute="trailing" constant="8" id="Qdy-j2-0C2"/>
+                                <constraint firstItem="5ec-EH-mzQ" firstAttribute="width" secondItem="cng-yJ-jcX" secondAttribute="width" id="ZfJ-2D-u53"/>
+                                <constraint firstAttribute="trailing" secondItem="5ec-EH-mzQ" secondAttribute="trailing" constant="8" id="ctw-U4-kf4"/>
+                                <constraint firstItem="5ec-EH-mzQ" firstAttribute="centerY" secondItem="KR2-Ir-wMt" secondAttribute="centerY" id="hLs-wI-OHp"/>
+                                <constraint firstItem="cng-yJ-jcX" firstAttribute="centerY" secondItem="KR2-Ir-wMt" secondAttribute="centerY" id="jEK-jP-UtB"/>
+                                <constraint firstItem="cng-yJ-jcX" firstAttribute="leading" secondItem="KR2-Ir-wMt" secondAttribute="leading" constant="8" id="to0-UL-pkU"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="478-9v-Yi1">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="478-9v-Yi1" id="74F-Uk-ZcX">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
