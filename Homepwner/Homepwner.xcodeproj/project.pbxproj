@@ -15,6 +15,7 @@
 		405ADC2F1C7CCD32008052D6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405ADC2E1C7CCD32008052D6 /* Item.swift */; };
 		405ADC311C7CD2C9008052D6 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405ADC301C7CD2C9008052D6 /* ItemStore.swift */; };
 		405ADC331C7CD342008052D6 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405ADC321C7CD342008052D6 /* ItemsViewController.swift */; };
+		40EFDBEC1C98D382009EFF41 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EFDBEB1C98D382009EFF41 /* ImageStore.swift */; };
 		40FADF421C8C977000FF9E74 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FADF411C8C977000FF9E74 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		405ADC2E1C7CCD32008052D6 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		405ADC301C7CD2C9008052D6 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		405ADC321C7CD342008052D6 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		40EFDBEB1C98D382009EFF41 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		40FADF411C8C977000FF9E74 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				405ADC321C7CD342008052D6 /* ItemsViewController.swift */,
 				400586DE1C81FB44007E83AB /* ItemCell.swift */,
 				40FADF411C8C977000FF9E74 /* DetailViewController.swift */,
+				40EFDBEB1C98D382009EFF41 /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				405ADC1D1C7CC92C008052D6 /* AppDelegate.swift in Sources */,
 				40FADF421C8C977000FF9E74 /* DetailViewController.swift in Sources */,
 				405ADC311C7CD2C9008052D6 /* ItemStore.swift in Sources */,
+				40EFDBEC1C98D382009EFF41 /* ImageStore.swift in Sources */,
 				400586DF1C81FB44007E83AB /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
